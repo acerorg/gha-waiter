@@ -13,7 +13,7 @@ You can do something like this instead
 
 ```yml
 - name: Wait for Runner become Available and "online" or "offline" in GitHub
-  uses: acerorg/gha-waiter@v1
+  uses: acerorg/gha-waiter@v0
   with:
     delay: 15
     max_attempts: 30
@@ -27,7 +27,7 @@ You can do something like this instead
 
 ```yml
 - name: Wait for spot instance requests to become "active" or "disabled" in AWS
-  uses: acerorg/gha-waiter@v1
+  uses: acerorg/gha-waiter@v0
   env:
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   with:
@@ -44,7 +44,7 @@ For aws logs, there is a quota limit on the AWS account, and you will see `Throt
 
 ```yml
 - name: Wait for CloudWatch Logs Stream become available
-  uses: acerorg/gha-waiter@v1
+  uses: acerorg/gha-waiter@v0
   env:
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   with:
@@ -60,7 +60,7 @@ For aws logs, there is a quota limit on the AWS account, and you will see `Throt
 
 ```yml
 - name: Monitoring CloudWatch Log Stream
-  uses: acerorg/gha-waiter@v1
+  uses: acerorg/gha-waiter@v0
   env:
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   with:
